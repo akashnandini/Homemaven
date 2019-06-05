@@ -32,7 +32,9 @@ function Header(){
    // render() {
         return (
            
-                <Carousel autoPlay>                    
+                <Carousel autoPlay>    
+                    
+                    
                     <div>
                         <img src="car1.jpg" />                       
                     </div>                    
@@ -45,6 +47,7 @@ function Header(){
                     <div>
                         <img src="airplane1.jpg"/>                       
                     </div>
+                  
                 </Carousel>           
         )
     }

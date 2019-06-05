@@ -14,11 +14,11 @@ export default {
   getHome: function (id) {
     return axios.get("/api/homes/" + id);
   },
-  /*
+ 
   // Deletes the book with the given id
   deleteHome: function (id) {
     return axios.delete("/api/homes/" + id);
-  },*/
+  },
   // Saves a book to the database
   saveHouse: function (homeData) {    
     return axios.post("/api/homes", homeData);

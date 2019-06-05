@@ -14,36 +14,35 @@ function Nav() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary home">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-      
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item">      
       <a className="navbar-brand" href="/">
         HomeMaven
       </a>
       </li>
-      <li class="nav-item">
+      <li className="nav-item">
       <a className="navbar-brand" href="/search">
         Search Home
       </a>
       </li>
-      <li class="nav-item">
+      <li className="nav-item">
       <a className="navbar-brand" href="/save">
         Saved Homes
       </a>
       </li>
       </ul>
-      <ul class="navbar-nav">
-      <li class="nav-item">
+      <ul className="navbar-nav">
+      <li className="nav-item">
       <a className="navbar-brand" href="/contact">
         Contact
       </a>
       </li>
-      <li class="nav-item">
+      <li className="nav-item">
       <a className="navbar-brand" href="/login">
         Login
       </a>
       </li>
-      <li class="nav-item">
+      <li className="nav-item">
       <a className="navbar-brand" href="/" onClick={clearStorage}>
         Logout
       </a>

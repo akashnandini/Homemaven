@@ -13,7 +13,7 @@ class Homes extends Component {
     levels:"",
     finished_size:"",
     year_built:"",
-    homes:[]
+    homes:[],
   };
 
   componentDidMount() {
@@ -38,12 +38,12 @@ class Homes extends Component {
        //console.log(this.state.homes);
   };
 
+ 
   deleteHome = id => {
-    API.deleteBook(id)
+    API.deleteHome(id)
       .then(res => this.loadHomes())
       .catch(err => console.log(err));
   };
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -51,8 +51,24 @@ class Homes extends Component {
     });
   };
 
-  
+  showMap = (str) => {
+    console.log("search Map");
+    var str1 = str.split(",");
+    console.log(str1[0], str1[1]);
+    API.displayMap(str1[0], str1[1])  
+      .then(response => {
+        console.log("response:  "+ JSON.stringify(response));
+        this.setState({
+          mapUrl:response.data.results[0].locations[0].mapUrl,          
+        });
+        console.log("MapUrllllllllllllllllll  "+this.state.mapUrl);
+      })        
+      .catch(err => console.log(err));
 
+      this.render();
+    }
+   
+   
   render() {
     return (      
             <Jumbotron>
@@ -63,19 +79,23 @@ class Homes extends Component {
                   <div class="card-body" style={{ backgroundColor: "lightgrey",color: "black"}}>
                     <h5 class="card-title"></h5>
                     <p class="card-text" style={{opacity:2}}>{this.state.homes.length ? (
-       
-                          <ul>
+                      <List className="list-group">
+                          
                             {this.state.homes.map(home => (
-                              <li>                                
+                              <ListItem className="list-group-item" key={home.id}>
+                                                           
                                   <strong>
                                     {home.address}
                                   </strong>
-                                  <strong>
-                                    {home.countuy}
-                                  </strong>
-                              </li>
+                                  <a href={`https://www.google.com/maps/place/${home.address}`} target="_black">
+                                  <button type="button" className="btn btn-primary mt-3 btnNew">View</button>
+                                  </a>
+                                  <button type="button" onClick={() => this.deleteHome(home._id)} className="btn btn-primary mt-3 btnNew">Delete</button>
+                                  </ListItem> 
                             ))}
-                          </ul>
+                            
+                            </List>
+                          
                         ) : (
                           <h3>No Results to Display</h3>
                         )}</p>

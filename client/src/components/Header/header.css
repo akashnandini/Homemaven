@@ -4,7 +4,7 @@
     color: white;
     font-weight: bolder;
     background-size: cover;
-    width:80%;
+    width:100%;
     margin-left:130px;
     height:650px;
     margin-top:25px;
@@ -13,7 +13,7 @@
 
 @media only screen and (max-width: 600px) {
     .header {
-     width:430px;
+     width:530px;
      margin-left: 10px;
      
     }
