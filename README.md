@@ -4,7 +4,7 @@ Homemaven is a realtor app. It allows the user to register and login. After logi
 
 https://homemavens.herokuapp.com/
 
-##Technologies Used
+## Technologies Used
 
 Javascript
 
@@ -22,7 +22,7 @@ React
 
 HTML
 
-##Contributors
+## Contributors
 
 Nandini
 
