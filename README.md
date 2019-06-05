@@ -7,14 +7,23 @@ https://homemavens.herokuapp.com/
 ##Technologies Used
 
 Javascript
+
 CSS
+
 Bootstrap
+
 Node
+
 Express
+
 MongoDB
+
 React
+
 HTML
 
 ##Contributors
+
 Nandini
+
 Praisy
